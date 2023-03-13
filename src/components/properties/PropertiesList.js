@@ -64,7 +64,6 @@ export const PropertiesList = (props) => {
             </fieldset>
             <button type="submit"
                 onClick={evt => {
-                    // Prevent form from being submitted
                     evt.preventDefault()
                     const newProperty = {
                         name: currentProperty.name,
@@ -73,7 +72,6 @@ export const PropertiesList = (props) => {
                         imageURL: currentProperty.imageURL
                     }
 
-                    // Send POST request to your API
                     createProperty(newProperty)
                         .then(() => navigate("/properties"))
                 }}

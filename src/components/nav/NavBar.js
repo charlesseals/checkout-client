@@ -15,9 +15,6 @@ export const NavBar = () => {
             <li className="navbar__item">
                 <Link className="navbar__link" to="/suggester">Suggester</Link>
             </li>
-            {/* <li className="navbar__item">
-                Profile
-            </li> */}
             {
                 (localStorage.getItem("co_token") !== null) ?
                     <li className="nav-item">

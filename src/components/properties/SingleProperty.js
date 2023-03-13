@@ -6,7 +6,6 @@ import { updateProperty, getSingleProperty } from '../../managers/PropertiesMana
 export const SingleProperty = () => {
     const navigate = useNavigate()
     const { propertyId } = useParams()
-    // const [property, setUpdatedProperty] = useState({})
 
     const [currentProperty, setCurrentProperty] = useState({
         name: "",
@@ -64,12 +63,8 @@ return (
                 />
             </div>
         </fieldset>
-
-        {/* TODO: create the rest of the input fields */}
-
         <button type="submit"
             onClick={evt => {
-                // Prevent form from being submitted
                 evt.preventDefault()
 
                 const property = {
@@ -79,7 +74,6 @@ return (
                     size: currentProperty.size
                 }
 
-                // Send POST request to your API
                 updateProperty(propertyId, property)
                     .then(() => navigate("/properties"))
             }}
