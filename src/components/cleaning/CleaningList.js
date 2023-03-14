@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import React, { useEffect, useState } from "react"
 import { getCleaners, getProperties, getCleanings, createCleaning } from "../../managers/CleaningsManager.js"
 

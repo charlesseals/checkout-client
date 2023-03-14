@@ -1,5 +1,4 @@
 import React from 'react';
-import { ReactDOM } from 'react-dom';
 
 export const Welcome = () => {
     return <>
@@ -9,7 +8,7 @@ export const Welcome = () => {
         <body>
             {/* <!-- Card --> */}
             <div class="card">
-            <img src="https://picsum.photos/id/237/300/200" alt="Card image" />
+            <img src="https://picsum.photos/id/237/300/200" alt="CardImage" />
             <h2>Card Title</h2>
             <p>Some text describing the card content.</p>
             </div>
