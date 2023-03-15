@@ -9,7 +9,7 @@ export const PropertiesList = (props) => {
         name: "",
         address: "",
         size: 0,
-        imageURL: ""
+        image_url: ""
     })
 
     useEffect(() => {
@@ -55,9 +55,9 @@ export const PropertiesList = (props) => {
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="imageURL">HOUSE IMAGE URL: </label>
-                    <input type="text" name="imageURL" required autoFocus className="form-control"
-                        defaultValue={currentProperty.imageURL}
+                    <label htmlFor="image_url">HOUSE IMAGE URL: </label>
+                    <input type="text" name="image_url" required autoFocus className="form-control"
+                        defaultValue={currentProperty.image_url}
                         onChange={changePropertyState}
                     />
                 </div>
@@ -69,21 +69,24 @@ export const PropertiesList = (props) => {
                         name: currentProperty.name,
                         address: currentProperty.address,
                         size: currentProperty.size,
-                        imageURL: currentProperty.imageURL
+                        image_url: currentProperty.image_url
                     }
 
                     createProperty(newProperty)
                         .then(() => navigate("/properties"))
+                        window.location.reload(true);
+
                 }}
                 className="btn btn-primary">ADD NEW PROPERTY</button>
         </form>
+        <h2 className="propertyForm__name">PROPERTIES</h2>
         <article className="propertyList">
             {
                 properties.map(property => {
                     return <section key={`property--${property.id}`} className="property">
-                        <div className="property__imageURL">{property.imageURL}</div>
-                        <div className="property__name">NAME:{property.name}</div>
-                        <div className="property__address">ADDRESS:{property.address}</div>
+                        <img src={`${property.image_url}`} alt="House" className="property__imageURL"></img>
+                        <div className="property__name">NAME: {property.name}</div>
+                        <div className="property__address">ADDRESS: {property.address}</div>
                         <div className="property__size">SQ.FT. {property.size}</div>
                         <button
                             className="edit-property"
