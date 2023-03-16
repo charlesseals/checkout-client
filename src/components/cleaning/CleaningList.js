@@ -10,8 +10,8 @@ export const CleaningList = (props) => {
     const [ currentCleaning, setCurrentCleaning ] = useState({
         cleaner_id: 0,
         property_id: 0,
-        dateTime: "",
-        progress: ""
+        date_time: "",
+        progress: false
     })
 
     useEffect(() => {
@@ -29,6 +29,27 @@ export const CleaningList = (props) => {
         setCurrentCleaning(copy)
     }
 
+    const progressSetter = () => {
+        const now = new Date();
+        const dateTime = new Date(currentCleaning.date_time);
+        const isPast = dateTime < now;
+        const progress = isPast ? true : false;
+        setCurrentCleaning({...currentCleaning, progress: progress});
+    }
+    // const progressSetter = () => {
+    // return new Promise((resolve) => {
+    //     const now = new Date();
+    //     const appointmentDate = new Date(currentCleaning.date_time);
+    //     const isPast = now > appointmentDate;
+    //     setCurrentCleaning(prev => ({
+    //     ...prev,
+    //     progress: isPast ? true : false,
+    //     }), () => {
+    //     resolve(); // resolve the Promise when setState is complete
+    //     });
+    // });
+    // };
+    
     return (
         <>
             <form className="cleaningForm">
@@ -45,8 +66,8 @@ export const CleaningList = (props) => {
                         {cleaners.map((cleaner) => { return <option value={cleaner.id} >{cleaner.name}</option>})}
                     </select>
                     <div className="form-group">
-                        <label htmlFor="dateTime">DATE AND TIME: </label>
-                        <input type="datetime-local" name="dateTime" required autoFocus className="form-control"
+                        <label htmlFor="date_time">DATE AND TIME: </label>
+                        <input type="datetime-local" name="date_time" required autoFocus className="form-control"
                             defaultValue={currentCleaning.dateTime}
                             onChange={changeCleaningState}
                             />
@@ -56,13 +77,13 @@ export const CleaningList = (props) => {
                     onClick={evt => {
                         evt.preventDefault()
                         const cleaning = {
-                            cleaner_id: currentCleaning.cleaner_id,
-                            property_id: currentCleaning.property_id,
-                            dateTime: currentCleaning.dateTime,
+                            cleaner: currentCleaning.cleaner_id,
+                            property: currentCleaning.property_id,
+                            date_time: currentCleaning.date_time,
                             progress: currentCleaning.progress,
                         }
                         createCleaning(cleaning)
-                            .then(() => navigate("/cleanings"))
+                            .then(() => navigate("/cleaning"))
                     }}
                     className="btn btn-primary">SCHEDULE CLEANING</button>
             </form>
@@ -71,10 +92,11 @@ export const CleaningList = (props) => {
                 cleanings.map(cleaning => {
                     return <section key={`cleaning--${cleaning.id}`} className="cleaning">
                         {/* some of these will need custom property decorators to access nested information like the cleaning.property_id.image_URL and the cleaning.cleaner_id.phone */}
-                        <div className="cleaning__imageURL">{cleaning.property_id.imageURL}</div>
-                        <div className="cleaning__name">CLEANER:{cleaning.cleaner_id.name}</div>
-                        <div className="cleaning__phone">CLEANER PHONE #:{cleaning.cleaner_id.phone}</div>
-                        <div className="cleaning__dateTime">DATE AND TIME: {cleaning.dateTime}</div>
+                        {/* <div className="cleaning__imageURL">{cleaning.property.image_url}</div> */}
+                        <img src={`${cleaning.property.image_url}`} alt="House" className="property__imageURL"></img>
+                        <div className="cleaning__name">CLEANER:{cleaning.cleaner.name}</div>
+                        <div className="cleaning__phone">CLEANER PHONE #:{cleaning.cleaner.phone_number}</div>
+                        <div className="cleaning__dateTime">DATE AND TIME: {cleaning.date_time}</div>
                         <div className="cleaning__progress">{cleaning.progress}</div>
                     </section>
                 })
