@@ -6,32 +6,35 @@ export const NavBar = () => {
     const navigate = useNavigate()
     return (
         <ul className="navbar">
-            <li className="navbar__item">
+            <h2>
+                <Link className="navbar__link" to="/">CHECKOUT</Link>
+            </h2>
+            <h3 className="navbar__item">
                 <Link className="navbar__link" to="/properties">Properties</Link>
-            </li>
-            <li className="navbar__item">
+            </h3>
+            <h3 className="navbar__item">
                 <Link className="navbar__link" to="/cleaning">Cleaning</Link>
-            </li>
-            <li className="navbar__item">
+            </h3>
+            <h3 className="navbar__item">
                 <Link className="navbar__link" to="/suggester">Suggester</Link>
-            </li>
+            </h3>
             {
                 (localStorage.getItem("co_token") !== null) ?
-                    <li className="nav-item">
-                        <button className="nav-link fakeLink"
+                    <div className="nav-item">
+                        <button className="logout-property"
                             onClick={() => {
                                 localStorage.removeItem("co_token")
                                 navigate('/login')
                             }}
                         >Logout</button>
-                    </li> :
+                    </div> :
                     <>
-                        <li className="nav-item">
+                        <div className="nav-item">
                             <Link className="nav-link" to="/login">Login</Link>
-                        </li>
-                        <li className="nav-item">
+                        </div>
+                        <div className="nav-item">
                             <Link className="nav-link" to="/register">Register</Link>
-                        </li>
+                        </div>
                     </>
             }
         </ul>

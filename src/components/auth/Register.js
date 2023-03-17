@@ -22,13 +22,16 @@ export const Register = () => {
                 "first_name": firstName.current.value,
                 "last_name": lastName.current.value,
                 "email": email.current.value,
-                "password": password.current.value
+                "password": password.current.value,
+                "bio": "",
+                "profile_image_url": ""
             }
 
             registerUser(newUser)
                 .then(res => {
                     if ("token" in res) {
                         localStorage.setItem("co_token", res.token)
+                        localStorage.setItem("user_id", res.user_id)
                         navigate("/")
                     }
                 })
@@ -60,16 +63,16 @@ export const Register = () => {
                     <input ref={username} type="text" name="username" className="form-control" placeholder="USERNAME" required />
                 </fieldset>
                 <fieldset>
+                    <label htmlFor="email"> EMAIL </label>
+                    <input ref={email} name="email" className="form-control" placeholder="EMAIL@EMAIL.EMAIL" />
+                </fieldset>
+                <fieldset>
                     <label htmlFor="inputPassword"> PASSWORD </label>
                     <input ref={password} type="password" name="password" className="form-control" placeholder="PASSWORD" required />
                 </fieldset>
                 <fieldset>
                     <label htmlFor="verifyPassword"> VERIFY PASSWORD </label>
                     <input ref={verifyPassword} type="password" name="verifyPassword" className="form-control" placeholder="VERIFY PASSWORD" required />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="email"> EMAIL </label>
-                    <input ref={email} name="email" className="form-control" placeholder="EMAIL@EMAIL.EMAIL" />
                 </fieldset>
                 <fieldset style={{
                     textAlign: "center"

@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router-dom"
 import React, { useEffect, useState } from "react"
 import { getCleaners, getProperties, getCleanings, createCleaning } from "../../managers/CleaningsManager.js"
+import "./Ceaning.css"
 
 export const CleaningList = (props) => {
+    const localUser = localStorage.getItem("user_id")
     const navigate = useNavigate()
     const [ cleanings, setCleanings ] = useState([])
     const [ properties, setProperties ] = useState([])
@@ -15,10 +17,10 @@ export const CleaningList = (props) => {
     })
 
     useEffect(() => {
-        getCleanings().then(res => setCleanings(res))
+        getCleanings(localUser).then(res => setCleanings(res))
     }, [])
     useEffect(() => {
-        getProperties().then(res => setProperties(res))
+        getProperties(localUser).then(res => setProperties(res))
     }, [])
     useEffect(() => {
         getCleaners().then(res => setCleaners(res))
@@ -29,13 +31,13 @@ export const CleaningList = (props) => {
         setCurrentCleaning(copy)
     }
 
-    const progressSetter = () => {
-        const now = new Date();
-        const dateTime = new Date(currentCleaning.date_time);
-        const isPast = dateTime < now;
-        const progress = isPast ? true : false;
-        setCurrentCleaning({...currentCleaning, progress: progress});
-    }
+    // const progressSetter = () => {
+    //     const now = new Date();
+    //     const dateTime = new Date(currentCleaning.date_time);
+    //     const isPast = dateTime < now;
+    //     const progress = isPast ? true : false;
+    //     setCurrentCleaning({...currentCleaning, progress: progress});
+    // }
     // const progressSetter = () => {
     // return new Promise((resolve) => {
     //     const now = new Date();
@@ -56,18 +58,19 @@ export const CleaningList = (props) => {
                 <h2 className="cleaningForm__title">SCHEDULE CLEANING</h2>
                 <fieldset>
                     <select onChange={changeCleaningState} 
-                        className="form-group" name="property_id">
+                        className="form-group-select" name="property_id">
                         <option value={0}>SELECT PROPERTY</option>
                         {properties.map((property) => { return <option value={property.id} >{property.name}</option>})}
                     </select>
                     <select onChange={changeCleaningState} 
-                        className="form-group" name="cleaner_id">
+                        className="form-group-select" name="cleaner_id">
                         <option value={0}>SELECT CLEANER</option>
                         {cleaners.map((cleaner) => { return <option value={cleaner.id} >{cleaner.name}</option>})}
                     </select>
                     <div className="form-group">
-                        <label htmlFor="date_time">DATE AND TIME: </label>
+                        <label className="cleaningForm_header" htmlFor="date_time">DATE AND TIME: </label>
                         <input type="datetime-local" name="date_time" required autoFocus className="form-control"
+                            placeholder="SELECT DATE AND TIME"
                             defaultValue={currentCleaning.dateTime}
                             onChange={changeCleaningState}
                             />
@@ -84,6 +87,8 @@ export const CleaningList = (props) => {
                         }
                         createCleaning(cleaning)
                             .then(() => navigate("/cleaning"))
+                            window.location.reload(true);
+
                     }}
                     className="btn btn-primary">SCHEDULE CLEANING</button>
             </form>
@@ -93,11 +98,22 @@ export const CleaningList = (props) => {
                     return <section key={`cleaning--${cleaning.id}`} className="cleaning">
                         {/* some of these will need custom property decorators to access nested information like the cleaning.property_id.image_URL and the cleaning.cleaner_id.phone */}
                         {/* <div className="cleaning__imageURL">{cleaning.property.image_url}</div> */}
-                        <img src={`${cleaning.property.image_url}`} alt="House" className="property__imageURL"></img>
-                        <div className="cleaning__name">CLEANER:{cleaning.cleaner.name}</div>
-                        <div className="cleaning__phone">CLEANER PHONE #:{cleaning.cleaner.phone_number}</div>
-                        <div className="cleaning__dateTime">DATE AND TIME: {cleaning.date_time}</div>
-                        <div className="cleaning__progress">{cleaning.progress}</div>
+                            <img src={`${cleaning.property.image_url}`} alt="House" className="property__imageURL"></img>
+                        <div className="cleaning__information">
+                            <div>
+                                <div className="cleaning__progress">CLEANER:</div>
+                                <div className="cleaning__name">{cleaning.cleaner.name}</div>
+                            </div>
+                            <div>
+                                <div className="cleaning__progress">CLEANER PHONE #:</div>
+                                <div className="cleaning__name">{cleaning.cleaner.phone_number}</div>
+                            </div>
+                            <div >
+                                <div className="cleaning__progress">DATE AND TIME:</div>
+                                <div className="cleaning__name">{cleaning.date_time}</div>
+                            </div>
+                            <div className="cleaning__progress">{cleaning.progress}</div>
+                        </div>
                     </section>
                 })
             }

@@ -1,0 +1,133 @@
+.cleaningForm {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 20px;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+.cleaningForm__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #3e3e3e;
+}
+
+.cleaningForm_header {
+    text-align: center;
+    margin-bottom: 5px;
+
+}
+
+.cleaning__information {
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    font-size: 16px;
+    color: #3e3e3e;
+    text-align: left;
+}
+
+.form-group-select {
+    text-align: center;
+    width: 95%;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 12px 20px;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    color: #3e3e3e;
+    margin: 5px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #3e3e3e;
+}
+
+.form-group input[type="datetime-local"] {
+    align-self: center;
+    text-align: center;
+    margin-left: 3%;
+    /* margin-right: 25%; */
+    width: 80%;
+    padding: 12px 20px;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    color: #3e3e3e;
+}
+
+.btn-primary {
+    background-color: #233024;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #ffa200;
+}
+
+.cleaningList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.cleaning {
+    width: 200px;
+    height: 300px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #656c65;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    background: #656c65;
+    text-align: left;
+}
+
+.property__imageURL {
+    width: 200px;
+    height: 150px;
+    /* width: 100%; */
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.cleaning__name,
+.cleaning__phone,
+.cleaning__dateTime,
+.cleaning__progress {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 1px;
+}
+
+.cleaning__name {
+    font-weight: normal;
+}
+
+.cleaning__progress {
+    font-style: italic;
+    font-weight: bold;
+    color: #233024;
+}
+
+
