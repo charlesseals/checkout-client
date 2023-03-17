@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { useNavigate, useParams } from 'react-router-dom'
 import { updateProperty, getSingleProperty } from '../../managers/PropertiesManager.js'
+import "./Properties.css"
 
 
 export const SingleProperty = () => {
@@ -10,7 +11,7 @@ export const SingleProperty = () => {
     const [currentProperty, setCurrentProperty] = useState({
         name: "",
         address: "",
-        size: 0,
+        size: currentProperty,
         image_url: ""
     })
 
@@ -27,7 +28,7 @@ const changePropertyState = (domEvent) => {
 }
 
 return (
-    <form className="singleProperty">
+    <form className="singlePropertyForm">
         <h2 className="singleProperty__property">Edit Existing Property</h2>
         <fieldset>
             <div className="form-group">
@@ -58,8 +59,8 @@ return (
             <div className="form-group">
                 <label htmlFor="size">EDIT SQ.FT.: </label>
                 <input type="number" name="size" required autoFocus className="form-control"
-                    placeholder={currentProperty.size}
-                    defaultValue={currentProperty.size}
+                    // placeholder={currentProperty.size}
+                    Value={currentProperty.size}
                     onChange={changePropertyState}
                 />
             </div>

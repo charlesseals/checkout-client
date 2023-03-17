@@ -1,8 +1,13 @@
 import { useNavigate } from "react-router-dom"
 import React, { useEffect, useState } from "react"
 import { getProperties, deleteProperty, createProperty } from "../../managers/PropertiesManager.js"
+import "./Properties.css"
+
 
 export const PropertiesList = (props) => {
+    
+    const localUser = localStorage.getItem("user_id")
+
     const navigate = useNavigate()
     const [ properties, setProperties ] = useState([])
     const [currentProperty, setCurrentProperty] = useState({
@@ -13,7 +18,7 @@ export const PropertiesList = (props) => {
     })
 
     useEffect(() => {
-        getProperties()
+        getProperties(localUser)
         .then((res) => setProperties(res))
     }, [])
 
@@ -31,7 +36,7 @@ export const PropertiesList = (props) => {
     return (
         <>
         <form className="propertyForm">
-            <h2 className="propertyForm__name">REGISTER NEW PROPERTY</h2>
+            <h2 className="propertyRegister__name">REGISTER NEW PROPERTY</h2>
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="name">NAME: </label>
@@ -88,6 +93,7 @@ export const PropertiesList = (props) => {
                         <div className="property__name">NAME: {property.name}</div>
                         <div className="property__address">ADDRESS: {property.address}</div>
                         <div className="property__size">SQ.FT. {property.size}</div>
+                        <div className="edit-delete">
                         <button
                             className="edit-property"
                             onClick={() => {
@@ -100,6 +106,7 @@ export const PropertiesList = (props) => {
                                 handleDelete(property.id)
                             }}>DELETE
                         </button>
+                        </div>
                     </section>
                 })
             }

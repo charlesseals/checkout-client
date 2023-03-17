@@ -1,5 +1,5 @@
-export const getCleanings = () => {
-    return fetch("http://localhost:8000/cleanings", {
+export const getCleanings = (id) => {
+    return fetch(`http://localhost:8000/cleanings?user=${id}`, {
         headers:{
             "Authorization": `Token ${localStorage.getItem("co_token")}`
         }
@@ -19,8 +19,8 @@ export const createCleaning = (cleaning) => {
         .then(response => response.json())
 }
 
-export const getProperties = () => {
-    return fetch("http://localhost:8000/properties", {
+export const getProperties = (id) => {
+    return fetch(`http://localhost:8000/properties?user=${id}`, {
         headers:{
             "Authorization": `Token ${localStorage.getItem("co_token")}`
         }

@@ -1,5 +1,5 @@
-export const getProperties = () => {
-    return fetch("http://localhost:8000/properties", {
+export const getProperties = (id) => {
+    return fetch(`http://localhost:8000/properties?user=${id}`, {
         headers:{
             "Authorization": `Token ${localStorage.getItem("co_token")}`
         }
