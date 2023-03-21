@@ -60,3 +60,32 @@
     background-color: #ff0000;
 }
 
+.login-property {
+    background-color: #233024;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 5px;
+}
+.login-property:hover {
+    background-color: #ffa200;
+}
+
+.register-property {
+    background-color: #233024;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 5px;
+}
+.register-property:hover {
+    background-color: #ffa200;
+}
