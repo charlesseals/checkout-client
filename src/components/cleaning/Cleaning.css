@@ -9,6 +9,11 @@
     background: #fff;
 }
 
+.cleaningForm__name {
+    text-align: center;
+    color: white;
+}
+
 .cleaningForm__title {
     font-size: 24px;
     font-weight: bold;
