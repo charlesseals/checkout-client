@@ -1,16 +1,17 @@
-.propertyForm {
-    display: inline-block;
+.welcomeForm {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     max-width: 300px;
-    margin: 0 auto;
+    margin: 50% auto;
     text-align: center;
     padding: 50px 20px;
     border: 1px solid #d1d1d1;
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     background: #fff;
+    height: 300px;
 }
 
 .flex-row {
@@ -18,30 +19,30 @@
     flex-wrap: wrap;
 }
 
-.propertyForm__title {
+.welcomeForm__title {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 30px;
     color: #3e3e3e;
 }
 
-.propertyRegister__name {
+.welcomeRegister__name {
     text-align: center;
     color: #233024;
 }
-.propertyForm__name {
+.welcomeForm__name {
     text-align: center;
     color: white;
 }
 
 
-.propertyForm_header {
+.welcomeForm_header {
     text-align: center;
     margin-bottom: 5px;
 
 }
 
-.property__information {
+.welcome__information {
     margin-bottom: 30px;
 }
 
@@ -88,7 +89,7 @@
     color: #3e3e3e;
 }
 
-.btn-primary {
+.btnbtn-primary {
     background-color: #233024;
     color: #fff;
     border: none;
@@ -97,20 +98,22 @@
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
+    height: 75px;
+    margin-bottom: 10%;
 }
 
-.btn-primary:hover {
+.btnbtn-primary:hover {
     background-color: #ffa200;
 }
 
-.propertyList {
+.welcomeList {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-.property {
+.welcome {
     width: 200px;
     height: 300px;
     margin: 20px;
@@ -122,7 +125,7 @@
     text-align: left;
 }
 
-.property__imageURL {
+.welcome__imageURL {
     width: 200px;
     height: 150px;
     /* width: 100%; */
@@ -132,22 +135,44 @@
     margin-bottom: 20px;
 }
 
-.property__name,
-.property__phone,
-.property__dateTime,
-.property__progress {
+.welcome__name,
+.welcome__phone,
+.welcome__dateTime,
+.welcome__progress {
     font-size: 16px;
     color: #ffffff;
     margin-bottom: 1px;
 }
 
-.property__name {
+.welcome__name {
     font-weight: normal;
 }
 
-.property__progress {
+.welcome__progress {
     font-style: italic;
     font-weight: bold;
     color: #233024;
 }
 
+.welcomeCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+    padding: 5%;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+/* .welcomeWelcome {
+    flex: auto;
+}
+
+.welcomeCleaning {
+    flex: auto;
+}
+
+.welcomeSuggester {
+    flex: auto;
+} */

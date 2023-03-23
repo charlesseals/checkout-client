@@ -16,13 +16,13 @@ export const NavBar = () => {
                 <Link className="navbar__link" to="/">CHECKOUT</Link>
             </h2>
             <h3 className="navbar__item">
-                <Link className="navbar__link" to="/properties">Properties</Link>
+                <Link className="navbar__link" to="/properties">PROPERTIES</Link>
             </h3>
             <h3 className="navbar__item">
-                <Link className="navbar__link" to="/cleaning">Cleaning</Link>
+                <Link className="navbar__link" to="/cleaning">CLEANING</Link>
             </h3>
             <h3 className="navbar__item">
-                <Link className="navbar__link" to="/suggester">Suggester</Link>
+                <Link className="navbar__link" to="/suggester">SUGGESTER</Link>
             </h3>
             <div className="nav-item">
                 <button className="logout-property"
@@ -30,7 +30,7 @@ export const NavBar = () => {
                         localStorage.removeItem("co_token");
                         navigate('/login');
                     }}
-                >Logout</button>
+                >LOGOUT</button>
             </div>
         </ul>
     );

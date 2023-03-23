@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import React, { useEffect, useState } from "react"
 import { getCleaners, getProperties, getCleanings, createCleaning } from "../../managers/CleaningsManager.js"
-import "./Ceaning.css"
+import "./Cleaning.css"
 
 export const CleaningList = (props) => {
     const localUser = localStorage.getItem("user_id")
@@ -31,26 +31,6 @@ export const CleaningList = (props) => {
         setCurrentCleaning(copy)
     }
 
-    // const progressSetter = () => {
-    //     const now = new Date();
-    //     const dateTime = new Date(currentCleaning.date_time);
-    //     const isPast = dateTime < now;
-    //     const progress = isPast ? true : false;
-    //     setCurrentCleaning({...currentCleaning, progress: progress});
-    // }
-    // const progressSetter = () => {
-    // return new Promise((resolve) => {
-    //     const now = new Date();
-    //     const appointmentDate = new Date(currentCleaning.date_time);
-    //     const isPast = now > appointmentDate;
-    //     setCurrentCleaning(prev => ({
-    //     ...prev,
-    //     progress: isPast ? true : false,
-    //     }), () => {
-    //     resolve(); // resolve the Promise when setState is complete
-    //     });
-    // });
-    // };
     
     return (
         <>
@@ -92,12 +72,12 @@ export const CleaningList = (props) => {
                     }}
                     className="btn btn-primary">SCHEDULE CLEANING</button>
             </form>
+            <h2 className="cleaningForm__name">CLEANING APPOINTMENTS</h2>
             <article className="cleaningList">
             {
                 cleanings.map(cleaning => {
                     return <section key={`cleaning--${cleaning.id}`} className="cleaning">
                         {/* some of these will need custom property decorators to access nested information like the cleaning.property_id.image_URL and the cleaning.cleaner_id.phone */}
-                        {/* <div className="cleaning__imageURL">{cleaning.property.image_url}</div> */}
                             <img src={`${cleaning.property.image_url}`} alt="House" className="property__imageURL"></img>
                         <div className="cleaning__information">
                             <div>

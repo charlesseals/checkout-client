@@ -1,0 +1,49 @@
+.suggester-component {
+    width: 60%;
+    margin: auto;
+    margin-top: 2em;
+    background-color: #f8f9fa;
+    padding: 2em;
+    border-radius: 0.5em;
+}
+
+.suggester-heading {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #233024;
+}
+
+.suggester-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5em;
+}
+
+.form_control {
+    padding: 0.5em;
+    border-radius: 0.5em;
+    border: solid;
+    width: 80%;
+    margin-right: 1em;
+}
+
+.suggester-button {
+    background-color: #233024;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.suggester-button:hover {
+    background-color: #ffa200;
+}
+
+.suggester-response {
+    font-size: 1.5em;
+    color: #233024;
+    margin-top: 1em;
+}
