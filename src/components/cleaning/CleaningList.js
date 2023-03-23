@@ -110,7 +110,7 @@ export const CleaningList = (props) => {
                             </div>
                             <div >
                                 <div className="cleaning__progress">DATE AND TIME:</div>
-                                <div className="cleaning__name">{cleaning.date_time}</div>
+                                <div className="cleaning__name">{cleaning.date_time.replace('T', ' ').replace(':00Z', '')}</div>
                             </div>
                             <div className="cleaning__progress">{cleaning.progress}</div>
                         </div>
