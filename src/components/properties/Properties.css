@@ -3,10 +3,10 @@
     margin: 0 auto;
     text-align: center;
     padding: 50px 20px;
-    border: 1px solid #d1d1d1;
+    border: 1px solid transparent;
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    background: #fff;
+    background: transparent;
 }
 
 .propertyForm__title {
@@ -22,7 +22,7 @@
 }
 .propertyForm__name {
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 
@@ -39,7 +39,7 @@
 .form-group {
     margin-bottom: 25px;
     font-size: 16px;
-    color: #3e3e3e;
+    color: #2c1a55;
     text-align: left;
 }
 
@@ -49,7 +49,7 @@
     margin-left: 25%;
     margin-right: 25%;
     padding: 12px 20px;
-    border: 1px solid #d1d1d1;
+    /* border: 1px solid #d1d1d1; */
     border-radius: 5px;
     background-color: #f2f2f2;
     color: #3e3e3e;
@@ -71,14 +71,14 @@
     /* margin-right: 25%; */
     width: 80%;
     padding: 12px 20px;
-    border: 1px solid #d1d1d1;
+    /* border: 1px solid #d1d1d1; */
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: #f2eaff;
     color: #3e3e3e;
 }
 
 .btn-primary {
-    background-color: #233024;
+    background-color: #bda5f5;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -89,7 +89,7 @@
 }
 
 .btn-primary:hover {
-    background-color: #ffa200;
+    background-color: #8ce9e0;
 }
 
 .propertyList {
@@ -104,10 +104,14 @@
     height: 300px;
     margin: 20px;
     padding: 20px;
-    border: 1px solid #656c65;
+    /* border: 1px solid #7eb8e921; */
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    background: #656c65;
+    /* background: rgb(243, 237, 255); */
+    background: transparent;
+    background-position: center;
+    /* background-position-y: 125%; */
+    background-size: 100%;
     text-align: left;
 }
 
@@ -126,7 +130,7 @@
 .property__dateTime,
 .property__progress {
     font-size: 16px;
-    color: #ffffff;
+    color: #2d0a63;
     margin-bottom: 1px;
 }
 
@@ -149,10 +153,10 @@
     margin: 0 auto;
     text-align: center;
     padding: 50px 20px;
-    border: 1px solid #d1d1d1;
+    /* border: 1px solid #d1d1d1; */
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    background: #fff;
+    background: transparent;
 }
 
 .singlePropertyForm__title {
@@ -185,9 +189,9 @@
     margin-left: 25%;
     margin-right: 25%;
     padding: 12px 20px;
-    border: 1px solid #d1d1d1;
+    /* border: 1px solid #d1d1d1; */
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: transparent;
     color: #3e3e3e;
     margin: 5px;
 }
@@ -207,15 +211,15 @@
     /* margin-right: 25%; */
     width: 80%;
     padding: 12px 20px;
-    border: 1px solid #d1d1d1;
+    /* border: 1px solid #d1d1d1; */
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: transparent;
     color: #3e3e3e;
 }
 
-.btn-primary {
-    background-color: #233024;
-    color: #fff;
+.btn-main-primary {
+    background-color: #bda5f5;
+    color: #000000;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -224,8 +228,8 @@
     transition: background-color 0.3s;
 }
 
-.btn-primary:hover {
-    background-color: #ffa200;
+.btn-main-primary:hover {
+    background-color: #8ce9e0;
 }
 
 .singlePropertyList {
@@ -240,7 +244,7 @@
     height: 700px;
     margin: 20px;
     padding: 20px;
-    border: 1px solid #656c65;
+    /* border: 1px solid #656c65; */
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     background: #656c65;
@@ -277,8 +281,8 @@
 }
 
 .edit-property {
-    background-color: #233024;
-    color: #fff;
+    background-color: #bda5f5;
+    color: #000000;
     border: none;
     border-radius: 5px;
     padding: 6px 10px;
@@ -287,12 +291,12 @@
     transition: background-color 0.3s;
 }
 .edit-property:hover {
-    background-color: #ffa200;
+    background-color: #8ce9e0;
 }
 
 .delete-property {
-    background-color: #233024;
-    color: #fff;
+    background-color: #bda5f5;
+    color: #000000;
     border: none;
     border-radius: 5px;
     padding: 6px 10px;
@@ -302,7 +306,7 @@
     margin: 10px;
 }
 .delete-property:hover {
-    background-color: #ff0000;
+    background-color: #820d0d;
 }
 
 .edit-delete {
@@ -313,6 +317,8 @@
 
 }
 
-
+/* .fields {
+    background-color: #f2eaff;
+} */
 
 

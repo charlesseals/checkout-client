@@ -3,15 +3,15 @@
     margin: 0 auto;
     text-align: center;
     padding: 50px 20px;
-    border: 1px solid #d1d1d1;
+    /* border: 1px solid #d1d1d1; */
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    background: #fff;
+    background: transparent;
 }
 
 .cleaningForm__name {
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .cleaningForm__title {
@@ -38,18 +38,33 @@
     text-align: left;
 }
 
-.form-group-select {
+.cleaning-form-group {
     text-align: center;
     width: 95%;
     margin-left: 25%;
     margin-right: 25%;
     padding: 12px 20px;
-    border: 1px solid #d1d1d1;
+    border: 1px solid transparent;
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background: #f2eaff;
     color: #3e3e3e;
     margin: 5px;
 }
+
+.date-cleaning-form-group {
+    text-align: center;
+    width: 95%;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 12px 20px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    /* background: #f2eaff; */
+    background-color: transparent;
+    color: #3e3e3e;
+    margin: 5px;
+}
+
 
 .form-group label {
     display: block;
@@ -66,15 +81,15 @@
     /* margin-right: 25%; */
     width: 80%;
     padding: 12px 20px;
-    border: 1px solid #d1d1d1;
+    border: 1px solid transparent;
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: #f2eaff;
     color: #3e3e3e;
 }
 
 .btn-primary {
-    background-color: #233024;
-    color: #fff;
+    background-color: #bda5f5;
+    color: #000000;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -84,7 +99,7 @@
 }
 
 .btn-primary:hover {
-    background-color: #ffa200;
+    background-color: #8ce9e0;
 }
 
 .cleaningList {
@@ -99,10 +114,10 @@
     height: 300px;
     margin: 20px;
     padding: 20px;
-    border: 1px solid #656c65;
+    /* border: 1px solid #656c65; */
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    background: #656c65;
+    background: transparent;
     text-align: left;
 }
 
@@ -121,7 +136,8 @@
 .cleaning__dateTime,
 .cleaning__progress {
     font-size: 16px;
-    color: #ffffff;
+    font-weight: bolder;
+    color: #000000;
     margin-bottom: 1px;
 }
 
@@ -132,7 +148,7 @@
 .cleaning__progress {
     font-style: italic;
     font-weight: bold;
-    color: #233024;
+    color: #6c6c6c;
 }
 
 

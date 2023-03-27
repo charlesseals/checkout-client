@@ -38,18 +38,18 @@ export const CleaningList = (props) => {
                 <h2 className="cleaningForm__title">SCHEDULE CLEANING</h2>
                 <fieldset>
                     <select onChange={changeCleaningState} 
-                        className="form-group-select" name="property_id">
+                        className="cleaning-form-group" name="property_id">
                         <option value={0}>SELECT PROPERTY</option>
                         {properties.map((property) => { return <option value={property.id} >{property.name}</option>})}
                     </select>
                     <select onChange={changeCleaningState} 
-                        className="form-group-select" name="cleaner_id">
+                        className="cleaning-form-group" name="cleaner_id">
                         <option value={0}>SELECT CLEANER</option>
                         {cleaners.map((cleaner) => { return <option value={cleaner.id} >{cleaner.name}</option>})}
                     </select>
                     <div className="form-group">
                         <label className="cleaningForm_header" htmlFor="date_time">DATE AND TIME: </label>
-                        <input type="datetime-local" name="date_time" required autoFocus className="form-control"
+                        <input className="date-cleaning-form-group" type="datetime-local" name="date_time" required autoFocus 
                             placeholder="SELECT DATE AND TIME"
                             defaultValue={currentCleaning.dateTime}
                             onChange={changeCleaningState}

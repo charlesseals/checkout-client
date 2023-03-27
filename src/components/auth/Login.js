@@ -30,7 +30,7 @@ export const Login = () => {
     }
 
     return (
-        <main className="container--login">
+        <main className="login-register-component">
             <dialog className="dialog dialog--auth" ref={invalidDialog}>
                 <div>Username or password was not valid.</div>
                 <button className="button--close" onClick={e => invalidDialog.current.close()}>Close</button>
@@ -50,12 +50,12 @@ export const Login = () => {
                     <fieldset style={{
                         textAlign: "center"
                     }}>
-                        <button className="edit-property" type="submit">LOGIN</button>
+                        <button className="login-button" type="submit">LOGIN</button>
                     </fieldset>
-                </form>
-            </section>
-            <section className="link--register">
+            <section className="register-member">
                 <Link to="/register">NOT A MEMBER YET?</Link>
+            </section>
+                </form>
             </section>
         </main>
     )
