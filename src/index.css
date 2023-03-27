@@ -1,6 +1,15 @@
 
 body {
-  background-color: #233024;
+  /* background-color: #233024; */
+  /* background-image: linear-gradient(to bottom right, #233024, #3e473e, #4e3f26, #754307) ; */
+  /* background-image: radial-gradient(#0b1a0d, #142116, #253026, #354136, #4a544b, #666666) ; */
+  background-image: url(https://i.pinimg.com/564x/cb/47/e8/cb47e81368e36065442eb86ab70eb539.jpg);
+  /* background-size: 10%; */
+  background-size: 100%;
+  /* background-repeat: repeat-y; */
+  /* cross-fade( url(https://i.pinimg.com/originals/a5/c7/bb/a5c7bbe153ef080b5ef771bcf6a24304.gif) 50%, url(https://i.pinimg.com/originals/1a/a4/60/1aa4608ae3ec6562dc394ab747b26124.gif) 50%); */
+
+
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

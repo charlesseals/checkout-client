@@ -42,7 +42,7 @@ export const Register = () => {
 
     return (
         <main style={{ textAlign: "center" }}>
-
+            <div className="login-register-component">
             <dialog className="dialog dialog--password" ref={passwordDialog}>
                 <div>PASSWORDS DO NOT MATCH</div>
                 <button className="button--close" onClick={e => passwordDialog.current.close()}>CLOSE</button>
@@ -77,12 +77,14 @@ export const Register = () => {
                 <fieldset style={{
                     textAlign: "center"
                 }}>
-                    <button className="btn btn-1 btn-sep icon-send" type="submit">REGISTER</button>
+                    <button className="login-button" type="submit">REGISTER</button>
                 </fieldset>
-            </form>
-            <section className="link--register">
+            <section className="register-member">
                 ALREADY REGISTERED? <Link to="/login">LOGIN</Link>
             </section>
+            </form>
+
+            </div>
         </main>
     )
 }

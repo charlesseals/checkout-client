@@ -32,8 +32,8 @@ return (
         <h2 className="singleProperty__property">Edit Existing Property</h2>
         <fieldset>
             <div className="form-group">
-                <label htmlFor="image_url">EDIT IMAGE URL: </label>
                 <img src={`${currentProperty.image_url}`} alt="House" className="property__imageURL"></img>
+                <label htmlFor="image_url">EDIT IMAGE URL: </label>
                 <input type="text" name="image_url" required autoFocus className="form-control"
                     placeholder={currentProperty.image_url}
                     defaultValue={currentProperty.image_url}

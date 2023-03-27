@@ -1,10 +1,12 @@
 .suggester-component {
     width: 60%;
+    height: 100%;
     margin: auto;
     margin-top: 2em;
-    background-color: #f8f9fa;
+    background-color: transparent;
     padding: 2em;
     border-radius: 0.5em;
+    margin-bottom: 100%;
 }
 
 .suggester-heading {
@@ -29,8 +31,8 @@
 }
 
 .suggester-button {
-    background-color: #233024;
-    color: #fff;
+    background-color: #bda5f5;
+    color: #000000;
     border: none;
     padding: 0.5em 1em;
     border-radius: 0.5em;
@@ -39,11 +41,11 @@
 }
 
 .suggester-button:hover {
-    background-color: #ffa200;
+    background-color: #8ce9e0;
 }
 
 .suggester-response {
     font-size: 1.5em;
-    color: #233024;
+    color: #000000;
     margin-top: 1em;
 }

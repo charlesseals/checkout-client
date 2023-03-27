@@ -7,10 +7,10 @@
     margin: 50% auto;
     text-align: center;
     padding: 50px 20px;
-    border: 1px solid #d1d1d1;
+    /* border: 1px solid black; */
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    background: #fff;
+    background: transparent;
     height: 300px;
 }
 
@@ -90,7 +90,7 @@
 }
 
 .btnbtn-primary {
-    background-color: #233024;
+    background-color: #bda5f5;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -103,7 +103,7 @@
 }
 
 .btnbtn-primary:hover {
-    background-color: #ffa200;
+    background-color: #8ce9e0;
 }
 
 .welcomeList {
@@ -160,9 +160,11 @@
     flex-wrap: wrap;
     justify-content: center;
     justify-content: space-evenly;
-    padding: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
     margin-left: 6%;
     margin-right: 6%;
+    background: transparent;
 }
 
 /* .welcomeWelcome {

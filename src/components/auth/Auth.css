@@ -1,5 +1,5 @@
-.section {
-    
+.login-button {
+    background: #bda5f5;
 }
 
 .h1, h1 {
@@ -39,9 +39,9 @@ fieldset {
     font-weight: 400;
     line-height: 1.5;
     color: #495057;
-    background-color: #DDCBB7;
+    background-color: #f2eaff;
     background-clip: padding-box;
-    border: 1px solid #ced4da;
+    border: 1px solid #f2eaff;
     border-radius: .25rem;
     -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -59,7 +59,7 @@ fieldset {
     min-height: 25rem;
     min-width: 45rem;
     padding: 0 5rem;
-    background-color: hsla(0,0%,100%,0.75);
+    background-color: #f2eaff(0,0%,100%,0.75);
     background-blend-mode: overlay;
     background-repeat: no-repeat;
 }
@@ -74,8 +74,8 @@ fieldset {
     min-height: 5rem;
 }
 
-.edit-property {
-    background-color: #233024;
+.login-button {
+    background-color: #bda5f5;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -85,7 +85,7 @@ fieldset {
     transition: background-color 0.3s;
 }
 .edit-property:hover {
-    background-color: #ffa200;
+    background-color: #8ce9e0;
 }
 
 .propertyForm {
@@ -106,3 +106,17 @@ fieldset {
     color: #3e3e3e;
 }
 
+.login-register-component {
+    width: 60%;
+    height: 100%;
+    margin: auto;
+    margin-top: 2em;
+    background-color: transparent;
+    padding: 2em;
+    border-radius: 0.5em;
+    margin-bottom: 100%;
+}
+
+.register-member {
+    text-align: center;
+}

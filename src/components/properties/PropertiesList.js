@@ -37,7 +37,7 @@ export const PropertiesList = (props) => {
         <>
         <form className="propertyForm">
             <h2 className="propertyRegister__name">REGISTER NEW PROPERTY</h2>
-            <fieldset>
+            <fieldset className="fields">
                 <div className="form-group">
                     <label htmlFor="name">NAME: </label>
                     <input type="text" name="name" required autoFocus className="form-control"
@@ -82,7 +82,7 @@ export const PropertiesList = (props) => {
                         window.location.reload(true);
 
                 }}
-                className="btn btn-primary">ADD NEW PROPERTY</button>
+                className="btn btn-main-primary">ADD NEW PROPERTY</button>
         </form>
         <h2 className="propertyForm__name">PROPERTIES</h2>
         <article className="propertyList">

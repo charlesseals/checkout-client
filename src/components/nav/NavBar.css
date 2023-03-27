@@ -24,12 +24,12 @@
 }
 
 .navbar__link:hover {
-    color: #ffa200;
+    color: #bda5f5;
 }
 
 .navbar__link.active {
-    color: #ffa200;
-    border-bottom: 2px solid #ffa200;
+    color: #8ce9e0;
+    border-bottom: 2px solid #8ce9e0;
 }
 
 .navbar__link.fakeLink {
@@ -42,11 +42,11 @@
 }
 
 .navbar__link.fakeLink:hover {
-    color: #0099FF;
+    color: #8ce9e0;
 }
 
 .logout-property {
-    background-color: #233024;
+    background-color: #bda5f5;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -57,11 +57,11 @@
     margin: 5px;
 }
 .logout-property:hover {
-    background-color: #ff0000;
+    background-color: #6c0000;
 }
 
 .login-property {
-    background-color: #233024;
+    background-color: #bda5f5;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -72,7 +72,7 @@
     margin: 5px;
 }
 .login-property:hover {
-    background-color: #ffa200;
+    background-color: #8ce9e0;
 }
 
 .register-property {
@@ -87,5 +87,5 @@
     margin: 5px;
 }
 .register-property:hover {
-    background-color: #ffa200;
+    background-color: #8ce9e0;
 }
